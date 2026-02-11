@@ -6,6 +6,7 @@ Although WordPress can work in almost any environment, some environments are mor
 
 Quick recommendations:
 
+- [WordPress 6.9 Server Compatibility](https://make.wordpress.org/hosting/)
 - [WordPress 6.8 Server Compatibility](https://make.wordpress.org/hosting/2025/04/16/wordpress-6-8-server-compatibility/)
 - [WordPress 6.7 Server Compatibility](https://make.wordpress.org/hosting/2024/11/05/wordpress-6-7-server-compatibility/)
 - [WordPress 6.6 Server Compatibility](https://make.wordpress.org/hosting/2024/07/10/wordpress-6-6-server-compatibility/)
@@ -44,6 +45,51 @@ WordPress supports many versions of PHP, some even obsolete ([See PHP Compatibil
 
 Below are details on specific WordPress versions, PHP compatibility for that version and development tickets related to PHP compatibility at the time of release. Tickets related to PHP compatibility can be found at any time by [Searching WordPress Trac](https://core.trac.wordpress.org/query?status=accepted&status=assigned&status=closed&status=new&status=reopened&status=reviewing&keywords=~php&keywords=~php80&keywords=~php81&keywords=~php82&keywords=~php83&keywords=~php88&milestone=6.7&milestone=6.8&milestone=Future+Release&group=resolution&col=id&col=summary&col=owner&col=type&col=priority&col=component&col=version&order=priority).
 
+#### WordPress 6.9
+
+- [PHP 8.2](https://www.php.net/ChangeLog-8.php#PHP_8_2) (Active Support)
+- [PHP 8.3](https://www.php.net/ChangeLog-8.php#PHP_8_3) (Active Support)
+- [PHP 8.4](https://www.php.net/ChangeLog-8.php#PHP_8_4) (Active Support)
+- [PHP 8.5](https://www.php.net/ChangeLog-8.php#PHP_8_5) (Candidate Support)
+
+_IMPORTANT: WordPress 6.9 is **fully compatible** with PHP 7.4 (1), 8.0 (1), 8.1 (1), 8.2, and 8.3, and **beta compatible** with PHP 8.4 and PHP 8.5. As of the WordPress 6.9 release, the term "compatible with exceptions" is no longer used._
+
+_(1) These PHP versions are end-of-life and are supported by WordPress for backward compatibility only. Use of supported PHP versions is strongly recommended._
+
+- What does "beta compatible" or "beta support" mean?
+  - “Beta compatible” or “beta support” means that WordPress Core is actively working toward full compatibility with that PHP version, but some issues may still be under review or pending resolution.
+  - When using a beta-supported PHP version:
+    - Deprecation notices may appear in error logs, wp-admin, or on the front end.
+    - Deprecation notices are not errors and do not indicate broken functionality.
+    - They signal areas of the codebase that will need updates for future PHP versions.
+  - More information on how PHP versions move from beta to full support is documented by the Core team:
+    - https://make.wordpress.org/core/2025/04/09/php-8-support-clarification/
+
+- PHP 8.4
+  - Deprecation notices may be visible.
+  - Deprecations do not break functionality and are expected during the transition phase.
+  - WordPress Core continues active compatibility work.
+  - [#62061: Prepare for PHP 8.4](https://core.trac.wordpress.org/ticket/62061). _NOTE: Closed / Fixed_
+
+- PHP 8.5
+  - Initial compatibility work is underway.
+  - Deprecation notices may occur as PHP 8.5 introduces new language changes.
+  - Full compatibility is targeted for a future WordPress release.
+  - [#63061: Prepare for PHP 8.5](https://core.trac.wordpress.org/ticket/63061)
+
+- Other PHP Related Tickets
+  - [#51525: Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type()](https://core.trac.wordpress.org/ticket/51525). _Note: Moved to Future Release._
+  - [#54183: Tests: decide on how to handle deprecations in PHPUnit](https://core.trac.wordpress.org/ticket/54183). _Note: Moved to Future Release._
+  - [#54537: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved](https://core.trac.wordpress.org/ticket/54537). _Note: Moved to Future Release._
+  - [#58874: Code Modernization: Consider using the null coalescing operator](https://core.trac.wordpress.org/ticket/58874). _Note: Moved to Future Release._
+  - [#59234: Introduce a wp_json_decode() function, including validation when available](https://core.trac.wordpress.org/ticket/59234). _Note: Closed and will not be moving forward._
+
+### Notes for Hosts and Developers
+
+- PHP 8.3 or later is recommended for production environments.
+- PHP 8.4 is suitable for testing and staging.
+- PHP 8.5 should be considered experimental until full compatibility is announced.
+
 #### WordPress 6.8
 
 - [PHP 8.1](https://www.php.net/ChangeLog-8.php#PHP_8_1) (Security Support)
@@ -73,7 +119,6 @@ _What does “beta compatible” or "beta support" mean?_
   - [#54537: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved.](https://core.trac.wordpress.org/ticket/54537). _Note: Moved to Future Release._
   - [#58874: Code Modernization: Consider using the null coalescing operator.](https://core.trac.wordpress.org/ticket/58874). _Note: Moved to Future Release._
   - [#59234: Introduce a wp_json_decode() function, including validation when available](https://core.trac.wordpress.org/ticket/59234). _Note: This ticket has been closed and won’t be moving forward._
-
 
 #### WordPress 6.7
 
