@@ -13,7 +13,7 @@ The team's goals and projects are focused on facilitating collaboration between 
 
 The Hosting Team believes that great hosting experiences enable WordPress to thrive. The team works to:
 
-- **Maintain testing software for Hosts to test server compatibility with new versions of WordPress
+- **Maintain testing software for Hosts** to test server compatibility with new versions of WordPress
 - **Publish authoritative documentation** on hosting best practices, server configurations, and environment recommendations for WordPress deployments
 - **Maintain compatibility guides** that help hosting providers and site owners understand which server environments work best with each WordPress release
 - **Monitor and evaluate** new PHP versions, databases (MySQL/MariaDB), and web servers to ensure WordPress compatibility and performance
